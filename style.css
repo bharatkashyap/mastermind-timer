@@ -1,0 +1,54 @@
+body {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.top,
+.right,
+.bottom,
+.left {
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  display: block;
+  background: rgba(205, 205, 205, 1);
+}
+
+.right,
+.left {
+  transform: rotate(180deg);
+  width: 1px;
+  height: 100%;
+  display: flex;
+  align-self: center;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+}
+
+.left {
+  position: absolute;
+  left: 0;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+#clock {
+  font-family: "Source Sans Pro", sans-serif;
+  color: rgba(205, 205, 205, 1);
+}
+
+#score,
+#pass {
+  font-family: "Source Code Pro", sans-serif;
+  /* color: rgba(232, 164, 51, 1); */
+  color: rgba(205, 205, 205, 1);
+}
+
+.btn {
+  font-family: "Alegreya Sans SC", sans-serif;
+}
