@@ -24,6 +24,7 @@
             <div class="col d-flex justify-content-center">
                 <button class="btn btn-lg btn-dark mx-1" id="pause" onClick="toggleTimer()">Start</button>
                 <button class="btn btn-lg btn-secondary mx-1" id="reset" onclick="resetWrapper()">Reset</button>
+                <audio id="time-up" src="timesUp.mp3" autostart="false" hidden="true" />
             </div>
         </div>
         <div class="row justify-content-center">
@@ -135,6 +136,9 @@
             decrementTimer();
             setSpans();
         }
+        else if(changingMilliseconds == 0) {
+            timesUp();
+        }
         setTime();
     }
 
@@ -202,6 +206,12 @@
     }
     function decrementPass() {
         pass = pass - 1;
+    }
+
+    // Sound player
+    function timesUp() {
+        var audio = document.getElementById("time-up");
+        audio.play();
     }
 
 </script>
